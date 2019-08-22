@@ -7,7 +7,7 @@ define(function (require) {
    
     var app ={
         init_vue:function(){                        
-            require(['vue!vue/app'], function(theApp){                
+            require(['vue!vue/views/app'], function(theApp){                
                 $( "body" ).append('<div id="app"></div>');                
                 theApp.$mount('#app');
             });

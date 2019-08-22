@@ -2,25 +2,28 @@
   <div>
     <div id="navbar"></div>
     <div id="content"></div>
-    <div id="footer"></div>
+    <div id="footer"></div>    
   </div>
 </template>
 
 
 
 <script>
-define(['Vue'], function(Vue){
+define(function (require) {   
+  var Vue = require('Vue');
+ 
+
   return new Vue({
     template: template,    
     data: {},
     created:function(){      
-      require(['vue!vue/navbar'], function(c){
+      require(['vue!vue/views/navbar'], function(c){
         c.$mount('#navbar');
       })
-       require(['vue!vue/footer'], function(c){
+       require(['vue!vue/views/footer'], function(c){
         c.$mount('#footer');
       })
-       require(['vue!vue/content'], function(c){
+       require(['vue!vue/views/content'], function(c){
         c.$mount('#content');
       });
     }
