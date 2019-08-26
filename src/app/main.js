@@ -1,9 +1,12 @@
 define(function (require) {    
-    require('bootstrap.min');require('css!assets/css/bootstrap.min');
+    require('bootstrap.min');
+    require('css!assets/css/bootstrap.min');
     require('css!assets/css/main');
     var $ = require('jquery');
     var Vue = require('Vue');
-    var vue = require('vuejs');
+    var vue = require('vuejs');    
+    //==Vue components
+    require(['vue!vue/components/navbar'])
    
     var app ={
         init_vue:function(){                        

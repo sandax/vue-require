@@ -41,71 +41,73 @@
 </template>
 <script>
 define(['Vue'], function(Vue){
-  return new Vue({
+  return Vue.component('navbar',{
     template: template,
-    data: {
-     navbar_brand: 'Brand',
-     my_menu: [
-        {
-          name:'Page 1',
-          url :'',
-          dropdown:[
+    data:function(){
+        return {
+        navbar_brand: 'Brand',
+        my_menu: [
             {
-                name:'SubPage 1',
-                url :'/ala',
-            },
-            { 
-                name:'SubPage 2',
-                url :'/ala',
-            }
+            name:'Page 1',
+            url :'',
+            dropdown:[
+                {
+                    name:'SubPage 1',
+                    url :'/ala',
+                },
+                { 
+                    name:'SubPage 2',
+                    url :'/ala',
+                }
 
-          ]
-        },
-        {
-          name:'Page2',
-          url :'/alaz',
-          active:true,
-        },
-        {
-          name:'Page 4',
-          url :'',
-          dropdown:[
-            {
-                name:'SubPage 1',
-                url :'/ala',
+            ]
             },
             {
-                name:'SubPage 2',
-                url :'/ala',
+            name:'Page2',
+            url :'/alaz',
+            active:true,
             },
             {
-                name:'SubPage 21',
-                url :'/ala',
+            name:'Page 4',
+            url :'',
+            dropdown:[
+                {
+                    name:'SubPage 1',
+                    url :'/ala',
+                },
+                {
+                    name:'SubPage 2',
+                    url :'/ala',
+                },
+                {
+                    name:'SubPage 21',
+                    url :'/ala',
+                },
+                {
+                    name:'SubPage 2222',
+                    url :'/ala',
+                },
+                {
+                    name:'SubPage 21111',
+                    url :'/ala',
+                },
+                {
+                    name:'SubPage 211',
+                    url :'/ala',
+                },
+                {
+                    name:'SubPage 2111',
+                    url :'/ala',
+                }
+            ]        
             },
             {
-                name:'SubPage 2222',
-                url :'/ala',
-            },
-            {
-                name:'SubPage 21111',
-                url :'/ala',
-            },
-            {
-                name:'SubPage 211',
-                url :'/ala',
-            },
-            {
-                name:'SubPage 2111',
-                url :'/ala',
+            name:'Page3',
+            url :'/alaz',
+            disabled:true,
             }
-          ]        
-        },
-        {
-          name:'Page3',
-          url :'/alaz',
-          disabled:true,
+        ]
         }
-      ]
     }
   })
 });

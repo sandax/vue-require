@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navbar></navbar>
     <div id="navbar"></div>
     <div id="content"></div>
     <div id="footer"></div>    
@@ -11,7 +12,7 @@
 <script>
 define(function (require) {   
   var Vue = require('Vue');
- 
+  
 
   return new Vue({
     template: template,    
