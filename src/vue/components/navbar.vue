@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">{{navbar_brand}}</a>
+    <a class="navbar-brand" href="#"> <img :src="navbar_brand" width="100px"></img></a>
     <button class="navbar-toggler"
      type="button" data-toggle="collapse"
       data-target="#navbarSupportedContent"
@@ -10,7 +10,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li v-for="item in my_menu" class="nav-item"
+        <li v-for="item in menu_items" class="nav-item"
         v-bind:class="{ active: item.active,dropdown:item.dropdown }">
           <a class="nav-link"
           :href="'#'+item.url"
@@ -43,71 +43,12 @@
 define(['Vue'], function(Vue){
   return Vue.component('navbar',{
     template: template,
-    data:function(){
-        return {
-        navbar_brand: 'Brand',
-        my_menu: [
-            {
-            name:'Page 1',
-            url :'',
-            dropdown:[
-                {
-                    name:'SubPage 1',
-                    url :'/ala',
-                },
-                { 
-                    name:'SubPage 2',
-                    url :'/ala',
-                }
-
-            ]
-            },
-            {
-            name:'Page2',
-            url :'/alaz',
-            active:true,
-            },
-            {
-            name:'Page 4',
-            url :'',
-            dropdown:[
-                {
-                    name:'SubPage 1',
-                    url :'/ala',
-                },
-                {
-                    name:'SubPage 2',
-                    url :'/ala',
-                },
-                {
-                    name:'SubPage 21',
-                    url :'/ala',
-                },
-                {
-                    name:'SubPage 2222',
-                    url :'/ala',
-                },
-                {
-                    name:'SubPage 21111',
-                    url :'/ala',
-                },
-                {
-                    name:'SubPage 211',
-                    url :'/ala',
-                },
-                {
-                    name:'SubPage 2111',
-                    url :'/ala',
-                }
-            ]        
-            },
-            {
-            name:'Page3',
-            url :'/alaz',
-            disabled:true,
-            }
-        ]
-        }
+    created: function () {    
+      //console.log(JSON.stringify(this.my_menu) );
+    },    
+    props:{
+      menu_items:Array,
+      navbar_brand:String
     }
   })
 });

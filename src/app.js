@@ -8,7 +8,8 @@ requirejs.config({
     map: {
         "*": {
             "text": "require-text",
-            "css":"require-css"           
+            "css":"require-css",        
+            "json":"requirejs-json"
         }
     },
     paths: {

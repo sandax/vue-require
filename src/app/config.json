@@ -1,0 +1,28 @@
+{
+  "menu_items": [
+    {
+      "name": "Page 1",
+      "url": "",
+      "dropdown": [
+        { "name": "SubPage 1", "url": "/ala" },
+        { "name": "SubPage 2", "url": "/ala" }
+      ]
+    },
+    { "name": "Page2", "url": "/alaz", "active": true },
+    {
+      "name": "Page 4",
+      "url": "",
+      "dropdown": [
+        { "name": "SubPage 1", "url": "/ala" },
+        { "name": "SubPage 2", "url": "/ala" },
+        { "name": "SubPage 21", "url": "/ala" },
+        { "name": "SubPage 2222", "url": "/ala" },
+        { "name": "SubPage 21111", "url": "/ala" },
+        { "name": "SubPage 211", "url": "/ala" },
+        { "name": "SubPage 2111", "url": "/ala" }
+      ]
+    },
+    { "name": "Page3", "url": "/alaz", "disabled": true }
+  ],
+  "navbar_brand":"https://static.rfstat.com/renderforest/images/v2/landing-pics/logo_landing/ma5.png"
+}

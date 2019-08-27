@@ -4,10 +4,15 @@ define(function (require) {
     require('css!assets/css/main');
     var $ = require('jquery');
     var Vue = require('Vue');
-    var vue = require('vuejs');    
+    var vue = require('vuejs');
+    var config = require('json!app/config.json');    
     //==Vue components
-    require(['vue!vue/components/navbar'])
-   
+    var vue_components = ['navbar','footer'];
+    for(var i in vue_components){
+        require(['vue!vue/components/'+vue_components[i]]);
+    }
+    
+    
     var app ={
         init_vue:function(){                        
             require(['vue!vue/views/app'], function(theApp){                
